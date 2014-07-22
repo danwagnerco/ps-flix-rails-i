@@ -103,3 +103,37 @@ Movie.create!([
     total_gross: 387_623_910
   }
 ])
+
+iron_man = Movie.find_by(:title => "Iron Man")
+
+iron_man.reviews.create!(
+  [
+    {
+      :name    => "Roger Ebert",
+      :stars   => 3,
+      :comment => "I laughed, I cried, I spilled my popcorn!"
+    },
+    {
+      :name    => "Gene Siskell",
+      :stars   => 5,
+      :comment => "I'm a better reviewer than he is."
+    },
+    {
+      :name    => "Peter Travers",
+      :stars   => 4,
+      :comment => "It's been years since a superhero was this fierce and this funny."
+    }
+  ]
+)
+
+super_man = Movie.find_by(:title => "Superman")
+
+super_man.reviews.create!(
+  [
+    {
+      :name    => "Elvis Mitchell",
+      :stars   => 5,
+      :comment => "It's a bird, it's a plane, it's a blockbuster!"
+    }
+  ]
+)
