@@ -14,8 +14,10 @@ end
 
 def review_attributes(overrides = {})
   {
-    name: "Roger Ebert",
-    stars: 3,
-    comment: "I laughed, I cried, I spilled my popcorn!"
+    :name    => "Roger Ebert",
+    :stars   => 3,
+    :comment => "I laughed, I cried, I spilled my popcorn!",
+    :city    => "Chicago",
+    :state   => "IL"
   }.merge(overrides)
 end

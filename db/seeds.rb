@@ -111,17 +111,23 @@ iron_man.reviews.create!(
     {
       :name    => "Roger Ebert",
       :stars   => 3,
-      :comment => "I laughed, I cried, I spilled my popcorn!"
+      :comment => "I laughed, I cried, I spilled my popcorn!",
+      :city    => "Chicago",
+      :state   => "IL"
     },
     {
       :name    => "Gene Siskell",
       :stars   => 5,
-      :comment => "I'm a better reviewer than he is."
+      :comment => "I'm a better reviewer than he is.",
+      :city    => "Rockford",
+      :state   => "IL"
     },
     {
       :name    => "Peter Travers",
       :stars   => 4,
-      :comment => "It's been years since a superhero was this fierce and this funny."
+      :comment => "It's been years since a superhero was this fierce and this funny.",
+      :city    => "Los Angeles",
+      :state   => "CA"
     }
   ]
 )
@@ -133,7 +139,9 @@ super_man.reviews.create!(
     {
       :name    => "Elvis Mitchell",
       :stars   => 5,
-      :comment => "It's a bird, it's a plane, it's a blockbuster!"
+      :comment => "It's a bird, it's a plane, it's a blockbuster!",
+      :city    => "New York City",
+      :state   => "NY"
     }
   ]
 )
