@@ -1,0 +1,17 @@
+<header id="content-header">
+  <h1>Reviews for <%= link_to(@movie.title, @movie) %></h1>
+</header>
+
+<ol id="reviews">
+  <% @reviews.each do |r| %>
+  <li>
+    <span class="review"><%= pluralize(r.stars, "star") %></span>
+    <span class="user"><%= r.name %></span>
+    <span class="date"><%= time_ago_in_words(r.created_at) %> ago</span>
+    <p>
+      &quot;<%= r.comment %>&quot;
+    </p>
+  </li>
+    
+  <% end %>
+</ol>
