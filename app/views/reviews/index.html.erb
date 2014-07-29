@@ -3,13 +3,13 @@
 </header>
 
 <ol id="reviews">
-  <% @reviews.each do |r| %>
+  <% @reviews.each do |review| %>
   <li>
-    <span class="review"><%= pluralize(r.stars, "star") %></span>
-    <span class="user"><%= r.name %></span>
-    <span class="date"><%= time_ago_in_words(r.created_at) %> ago</span>
+    <span class="review"><%= pluralize(review.stars, "star") %></span>
+    <span class="user"><%= link_to review.name, edit_movie_review_path(@movie, review) %></span>
+    <span class="date"><%= time_ago_in_words(review.created_at) %> ago</span>
     <p>
-      &quot;<%= r.comment %>&quot;
+      &quot;<%= review.comment %>&quot;
     </p>
   </li>
     

@@ -18,6 +18,17 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def edit
+    @review = @movie.reviews.find(params[:id])
+  end
+
+  def destroy
+    fail
+    @review = @movie.reviews.find(params[:id])
+    @review.destroy
+    redirect_to movie_reviews_url, :notice => "Review Successfully Deleted!"
+  end
+
   private
 
   def set_movie

@@ -28,6 +28,19 @@
     <%= format_total_gross(@movie) %>
   </p>
 
+  <h3>Average Review</h3>
+  <p>
+    <%= format_average_stars(@movie) %>
+  </p>
+
+  <% if @movie.recent_reviews.any? %>
+    <h3>Recent Reviews</h3>
+    <ol id="reviews">
+      <% @movie.recent_reviews.each do |review| %>
+        <li><%= review.comment %></li>
+      <% end %>
+    </ol>
+  <% end %>
 
   <%= link_to pluralize(@movie.reviews.size, "Review"), movie_reviews_path(@movie) %>
   
